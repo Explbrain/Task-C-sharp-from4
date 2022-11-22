@@ -20,25 +20,6 @@
 //  }
 // SumNumbers(a);
 
-// void SumNumbers(int x)
-// {
-//     int sum=0;
-//     for (int i =1; i<=x;i++) 
-//         sum=sum+i;
-//     Console.WriteLine($"Сумма всех чисел от 1 до {x} равна {sum}");
-// }
-
-// int SumNumbers2(int x)
-// {
-//     int sum=0;
-//     for (int i =1; i<=x;i++) 
-//         sum=sum+i;
-//     return sum;
-// }
-// Console.WriteLine("Введите целое число");
-// int n = Convert.ToInt32(Console.ReadLine());
-// //SumNumbers(n);
-// Console.WriteLine(SumNumbers2(n));
 
 
 // Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
