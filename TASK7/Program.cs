@@ -89,47 +89,90 @@
 // 5 9 2 3
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
-Console.WriteLine("Введите количество строк");
-int m = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите количество столбцов");
-int n = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите количество строк");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите количество столбцов");
+// int n = Convert.ToInt32(Console.ReadLine());
 
-int[,] FillArray(int m, int n)
+// int[,] FillArray(int m, int n)
+// {
+//     int[,] array = new int[m,n];
+//     for (int i=0;i<array.GetLength(0);i++)
+//     {
+//         for (int j=0;j<array.GetLength(1);j++)
+//             array[i,j]= new Random().Next(1,10);
+//     }
+//     return array;
+// }
+// void PrintArray(int[,] image)
+// {
+//     for (int i = 0; i < image.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < image.GetLength(1); j++)
+//         {
+//             Console.Write($"{image[i, j]} \t");
+//             }
+//         Console.WriteLine();
+//     }
+// }
+// double sum=0;
+// double av=0;
+// void Average(int[,] image)
+// {
+//     for (int j = 0; j < image.GetLength(1); j++)
+//     {
+//         for (int i = 0; i < image.GetLength(0); i++)
+//         {
+//             sum=sum + image [i,j]; 
+//         }
+//         av= sum/image.GetLength(0);
+//         Console.WriteLine(av);
+//     }
+// }
+
+// int[,] image=FillArray(m,n);
+// PrintArray(image);
+// Average(image);
+
+
+// Timur Islamgulov: // посчитаем сумму всех целых чисел от 1 до N, которое вводит пользователь
+// Console.Write ("Введите целое число ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+// int SumDigits(int n)
+// {
+// int sum = 0;
+// while (n>0)
+// {
+// sum=sum+n;
+// n--;
+// }
+// return sum;
+// }
+
+// int SumRec(int n)
+// {
+// if (n==0) return 0;
+// return n + SumRec(n-1);
+// }
+
+// Console.WriteLine(SumDigits(n));
+// Console.WriteLine(SumRec(n));
+// Timur Islamgulov: Задача 63: Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от 1 до N.
+// N = 5 -> "1, 2, 3, 4, 5"
+// N = 6 -> "1, 2, 3, 4, 5, 6"
+int SumDigits(int n)
 {
-    int[,] array = new int[m,n];
-    for (int i=0;i<array.GetLength(0);i++)
-    {
-        for (int j=0;j<array.GetLength(1);j++)
-            array[i,j]= new Random().Next(1,10);
-    }
-    return array;
+int sum = 0;
+while (n>0)
+{
+sum=sum+n;
+n--;
 }
-void PrintArray(int[,] image)
-{
-    for (int i = 0; i < image.GetLength(0); i++)
-    {
-        for (int j = 0; j < image.GetLength(1); j++)
-        {
-            Console.Write($"{image[i, j]} \t");
-            }
-        Console.WriteLine();
-    }
-}
-double sum=0;
-double av=0;
-void Average(int[,] image)
-{
-    for (int j = 0; j < image.GetLength(1); j++)
-    {
-        for (int i = 0; i < image.GetLength(0); i++)
-        {
-            sum=sum + image [i,j]; 
-        }
-        av= sum/image.GetLength(0);
-        Console.WriteLine(av);
-    }
+return sum;
 }
 
-int[,] image=FillArray(m,n);
-PrintArray(image);
-Average(image);
+int ListRec(int n)
+if (n==0) return 0;
+return n + SumRec(n-1);
+}
